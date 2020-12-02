@@ -14,69 +14,35 @@
 
 // Combos
 enum combos {
- WE,AS,SD,DF,XC,OP,CV,
- UI,HJ,JK,KL,MC,NM,
- FV,GB,HN,
- SDJK
+  N1, N2, N3, N4, N5, N6, N7, N8, N9, N10,
+  NS1
 };
 
-// NOTE: If you're using MT,LT or anything you must 
-// define it here. Note this if you change your layout!
-/* Keymap 0: Basic layer
- *
- * ,-----------------------------.       ,--------------------------------.
- * |      |    ESC    |     |     |      |     |    ESC    |    BSLH      |
- * |-----+-----+-----+-----+------|      |--------------------------------|
- * |      |   BSPC   ENT    |     |      |    LES   COLN  GRT    |        | 
- * |-----+-----+-----+--RMB+-LMB--+      |--------------------------------|
- * |      |   MINS    |     |     |      |    QUO   UNDR   |     |        |
- * `------+-----+-----+------+----'      `--------------------------------'
- *  .-------------------------.           .-----------------.   
- *  |        |       |        |           |        |    |   |
- *  '-------------------------'           '-----------------' 
- */
-const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END};
-//const uint16_t PROGMEM as_combo[] = {MT(MOD_LCTL, KC_A), KC_S, COMBO_END};
-const uint16_t PROGMEM sd_combo[] = {KC_S, KC_D, COMBO_END};
-const uint16_t PROGMEM df_combo[] = {KC_D, KC_F, COMBO_END};
-const uint16_t PROGMEM xc_combo[] = {KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM cv_combo[] = {KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM n1_combo[] = {KC_U, KC_G, COMBO_END};
+const uint16_t PROGMEM n2_combo[] = {KC_U, KC_C, COMBO_END};
+const uint16_t PROGMEM n3_combo[] = {KC_U, KC_R, COMBO_END};
+const uint16_t PROGMEM n4_combo[] = {KC_U, KC_H, COMBO_END};
+const uint16_t PROGMEM n5_combo[] = {KC_U, KC_T, COMBO_END};
+const uint16_t PROGMEM n6_combo[] = {KC_U, KC_N, COMBO_END};
+const uint16_t PROGMEM n7_combo[] = {KC_U, KC_M, COMBO_END};
+const uint16_t PROGMEM n8_combo[] = {KC_U, KC_W, COMBO_END};
+const uint16_t PROGMEM n9_combo[] = {KC_U, KC_V, COMBO_END};
+const uint16_t PROGMEM n10_combo[] = {KC_U, KC_Z, COMBO_END};
 
-const uint16_t PROGMEM op_combo[] = {KC_O, KC_P, COMBO_END};
-const uint16_t PROGMEM ui_combo[] = {KC_U, KC_I, COMBO_END};
-const uint16_t PROGMEM hj_combo[] = {KC_H, KC_J, COMBO_END};
-const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
-const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
-const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END}; 
-const uint16_t PROGMEM mc_combo[] = {KC_M, KC_COMM, COMBO_END};
-
-const uint16_t PROGMEM gb_combo[] = {KC_G, KC_B, COMBO_END};
-const uint16_t PROGMEM fv_combo[] = {KC_F, KC_V, COMBO_END};
-const uint16_t PROGMEM hn_combo[] = {KC_H, KC_N, COMBO_END};
-
-const uint16_t PROGMEM sdjk_combo[] = {KC_J, KC_K, KC_S, KC_D, COMBO_END};
+const uint16_t PROGMEM ns1_combo[] = {KC_E, KC_G, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
- // Horizontal Chords
-  [WE] = COMBO(we_combo, KC_ESC),
-  //[AS] = COMBO(as_combo, KC_ENT),
-  [SD] = COMBO(sd_combo, KC_BSPC),
-  [DF] = COMBO(df_combo, KC_TAB),
-  [XC] = COMBO(xc_combo, KC_MINS),
-  [CV] = COMBO(cv_combo, KC_ENT),
-
-  [OP] = COMBO(op_combo, KC_BSLS),
-  [UI] = COMBO(ui_combo, KC_ESC),
-  [HJ] = COMBO(hj_combo, KC_LT),
-  [JK] = COMBO(jk_combo, KC_COLN),
-  [KL] = COMBO(kl_combo, KC_GT),
-  [MC] = COMBO(mc_combo, KC_UNDS), // m,
-  [NM] = COMBO(nm_combo, KC_QUOT),
- 
- // Vertical
-  [GB] = COMBO(gb_combo, KC_BTN1),
-  [FV] = COMBO(fv_combo, KC_BTN2),
-  [HN] = COMBO(hn_combo, KC_ENT)
+  [N1] = COMBO(n1_combo, KC_1),
+  [N2] = COMBO(n2_combo, KC_2),
+  [N3] = COMBO(n3_combo, KC_3),
+  [N4] = COMBO(n4_combo, KC_4),
+  [N5] = COMBO(n5_combo, KC_5),
+  [N6] = COMBO(n6_combo, KC_6),
+  [N7] = COMBO(n7_combo, KC_7),
+  [N8] = COMBO(n8_combo, KC_8),
+  [N9] = COMBO(n9_combo, KC_9),
+  [N10] = COMBO(n10_combo, KC_0),
+  [NS1] = COMBO(ns1_combo, KC_EXCLAIM),
 };
 
 // Blank template at the bottom
@@ -97,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_gergoplex(
     KC_QUOT,              KC_COMM, KC_DOT, KC_P, KC_Y,   KC_F, KC_G, KC_C, KC_R, KC_L, 
     MT(MOD_LCTL, KC_A),   KC_O,    KC_E,   KC_U, KC_I,   KC_D, KC_H, KC_T, KC_N, MT(MOD_LCTL, KC_S),
-    MT(MOD_RSFT, KC_SCLN),KC_Q,    KC_J,   KC_K, KC_X,   KC_B, KC_M, KC_W, KC_V, MT(MOD_RSFT, KC_Z),
+    MT(MOD_RSFT, KC_SCLN),KC_Q,    KC_J,   KC_K, KC_X,   KC_B, KC_M, KC_W, KC_V, KC_Z,
 
     MT(MOD_LGUI, KC_ESC), MT(MOD_LALT, KC_ENT), LT(SYMB, KC_SPC),         // Left
     LT(NUMB, KC_SPC), KC_LSFT, MT(MOD_RSFT, KC_TAB)                // Right
@@ -139,3 +105,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              KC_F11,KC_F12,KC_TRNS,   KC_TRNS,KC_MPLY,KC_MNXT
     )
 };
+// > qmk compile
