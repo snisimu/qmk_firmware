@@ -15,7 +15,7 @@
 // Combos
 enum combos {
   N1, N2, N3, N4, N5, N6, N7, N8, N9, N10,
-  NS1
+  NS1, NS2, NS3, NS4, NS5, NS6, NS7, NS8, NS9, NS10
 };
 
 const uint16_t PROGMEM n1_combo[] = {KC_U, KC_G, COMBO_END};
@@ -27,9 +27,18 @@ const uint16_t PROGMEM n6_combo[] = {KC_U, KC_N, COMBO_END};
 const uint16_t PROGMEM n7_combo[] = {KC_U, KC_M, COMBO_END};
 const uint16_t PROGMEM n8_combo[] = {KC_U, KC_W, COMBO_END};
 const uint16_t PROGMEM n9_combo[] = {KC_U, KC_V, COMBO_END};
-const uint16_t PROGMEM n10_combo[] = {KC_U, KC_Z, COMBO_END};
+const uint16_t PROGMEM n10_combo[] = {KC_U, KC_S, COMBO_END};
 
 const uint16_t PROGMEM ns1_combo[] = {KC_E, KC_G, COMBO_END};
+const uint16_t PROGMEM ns2_combo[] = {KC_E, KC_C, COMBO_END};
+const uint16_t PROGMEM ns3_combo[] = {KC_E, KC_R, COMBO_END};
+const uint16_t PROGMEM ns4_combo[] = {KC_E, KC_H, COMBO_END};
+const uint16_t PROGMEM ns5_combo[] = {KC_E, KC_T, COMBO_END};
+const uint16_t PROGMEM ns6_combo[] = {KC_E, KC_N, COMBO_END};
+const uint16_t PROGMEM ns7_combo[] = {KC_E, KC_M, COMBO_END};
+const uint16_t PROGMEM ns8_combo[] = {KC_E, KC_T, COMBO_END};
+const uint16_t PROGMEM ns9_combo[] = {KC_E, KC_V, COMBO_END};
+const uint16_t PROGMEM ns10_combo[] = {KC_E, KC_S, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [N1] = COMBO(n1_combo, KC_1),
@@ -43,6 +52,15 @@ combo_t key_combos[COMBO_COUNT] = {
   [N9] = COMBO(n9_combo, KC_9),
   [N10] = COMBO(n10_combo, KC_0),
   [NS1] = COMBO(ns1_combo, KC_EXCLAIM),
+  [NS2] = COMBO(ns2_combo, KC_AT),
+  [NS3] = COMBO(ns3_combo, KC_HASH),
+  [NS4] = COMBO(ns4_combo, KC_DOLLAR),
+  [NS5] = COMBO(ns5_combo, KC_PERCENT),
+  [NS6] = COMBO(ns6_combo, KC_CIRCUMFLEX),
+  [NS7] = COMBO(ns7_combo, KC_AMPERSAND),
+  [NS8] = COMBO(ns8_combo, KC_ASTERISK),
+  [NS9] = COMBO(ns9_combo, KC_LEFT_PAREN),
+  [NS10] = COMBO(ns10_combo, KC_RIGHT_PAREN),
 };
 
 // Blank template at the bottom
@@ -61,12 +79,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *  '-------------------------'           '-----------------' 
  */
 [BASE] = LAYOUT_gergoplex(
-    KC_QUOT,              KC_COMM, KC_DOT, KC_P, KC_Y,   KC_F, KC_G, KC_C, KC_R, KC_L, 
-    MT(MOD_LCTL, KC_A),   KC_O,    KC_E,   KC_U, KC_I,   KC_D, KC_H, KC_T, KC_N, MT(MOD_LCTL, KC_S),
-    MT(MOD_RSFT, KC_SCLN),KC_Q,    KC_J,   KC_K, KC_X,   KC_B, KC_M, KC_W, KC_V, KC_Z,
+  MT(MOD_LCTL, KC_QUOT), KC_COMM, KC_DOT, KC_P, KC_Y,   KC_F, KC_G, KC_C, KC_R, MT(MOD_RGUI, KC_L), 
+  KC_A,   KC_O,    KC_E,   KC_U, KC_I,                  KC_D, KC_H, KC_T, KC_N, KC_S,
+  MT(MOD_RSFT, KC_SCLN),KC_Q, KC_J, KC_K, KC_X,         KC_B, KC_M, KC_W, KC_V, MT(MOD_RALT, KC_Z),
 
-    MT(MOD_LGUI, KC_ESC), MT(MOD_LALT, KC_ENT), LT(SYMB, KC_SPC),         // Left
-    LT(NUMB, KC_SPC), KC_LSFT, MT(MOD_RSFT, KC_TAB)                // Right
+  MT(MOD_LGUI, KC_ESC), MT(MOD_LALT, KC_ENT), LT(SYMB, KC_SPC),         // Left
+  LT(NUMB, KC_SPC), KC_LSFT, MT(MOD_RSFT, KC_TAB)                // Right
     ),
 /* Keymap 1: Symbols layer
  * ,-----------------------------.       ,--------------------------------.
