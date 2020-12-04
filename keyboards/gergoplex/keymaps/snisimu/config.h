@@ -1,2 +1,2 @@
-#define COMBO_COUNT 20
+#define COMBO_COUNT 1
 #define COMBO_ALLOW_ACTION_KEYS 
