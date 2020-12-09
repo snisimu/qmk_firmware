@@ -1,4 +1,4 @@
-/* Good on you for modifying your layout! if you don't have
+X/* Good on you for modifying your layout! if you don't have
  * time to read the QMK docs, a list of keycodes can be found at
  *
  * https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md
@@ -34,10 +34,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   RALT_T(KC_BSPACE), LT(NUMB, KC_ENT), LCTL(KC_7) // Right
 ),
 
-pppppppppppppppppppppppppppppppppppppppppppppppzzzzzzzzzzzzzzzzzzzzzzzzzzzzqqqoptttpqm------v[NUMB] = LAYOUT_gergoplex(
+[NUMB] = LAYOUT_gergoplex(
   LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LGUI(KC_4), LGUI(KC_5), /* */ LGUI(KC_6), LGUI(KC_7), LGUI(KC_8), LGUI(KC_9), RGUI_T(KC_NO), 
   LCTL_T(KC_1), KC_2, KC_3, KC_4, KC_5, /* */ KC_6, KC_7, KC_8, KC_9, RCTL_T(KC_0),
-  LALT_T(KC_EXCLAIM), RSFT(KC_2), RSFT(KC_3), RSFT(KC_4), RSFT(KC_5), /* */ RSFT(KC_6), RSFT(KC_7), RSFT(KC_8), RSFT(KC_9), RSFT(KC_0),
+  KC_EXCLAIM /* ALT does not work */, RSFT(KC_2), RSFT(KC_3), RSFT(KC_4), RSFT(KC_5), /* */ RSFT(KC_6), RSFT(KC_7), RSFT(KC_8), RSFT(KC_9), RSFT(KC_0),
   RGUI_T(KC_ESCAPE), LT(FNUM, KC_SPC), RSFT_T(KC_TAB), // Left
   RALT_T(KC_BSPACE), LT(NUMB, KC_ENT), LCTL(KC_7) // Right
 ),
@@ -45,7 +45,7 @@ pppppppppppppppppppppppppppppppppppppppppppppppzzzzzzzzzzzzzzzzzzzzzzzzzzzzqqqop
 [CURS] = LAYOUT_gergoplex(
   KC_GRAVE, RSFT(KC_EQUAL), KC_EQUAL, RSFT(KC_MINUS), RSFT(KC_LBRACKET), /* */ LSFT(KC_RBRACKET), KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT,
   LCTL_T(KC_SLASH), KC_MINUS, KC_MS_BTN1, KC_MS_BTN2, KC_LBRACKET, /* */ KC_RBRACKET, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,
-  LALT_T(KC_TILDE), RSFT(KC_BSLASH), KC_BSLASH, RSFT(KC_SLASH), KC_NO, /* */ KC_NO, KC_HOME, KC_PGDOWN, KC_PGUP, KC_END,
+  LALT_T(KC_TILDE), RSFT(KC_BSLASH), KC_BSLASH, RSFT(KC_SLASH), KC_NO, /* */ KC_DELETE, KC_HOME, KC_PGDOWN, KC_PGUP, KC_END,
   RGUI_T(KC_ESCAPE), LT(CURS, KC_SPC), RSFT_T(KC_TAB), // Left
   RALT_T(KC_BSPACE), LT(FNUM, KC_ENT), LCTL(KC_7) // Right
 ),
