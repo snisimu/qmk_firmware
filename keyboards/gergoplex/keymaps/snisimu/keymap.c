@@ -1,4 +1,4 @@
-X/* Good on you for modifying your layout! if you don't have
+/* Good on you for modifying your layout! if you don't have
  * time to read the QMK docs, a list of keycodes can be found at
  *
  * https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md
@@ -44,8 +44,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [CURS] = LAYOUT_gergoplex(
   KC_GRAVE, RSFT(KC_EQUAL), KC_EQUAL, RSFT(KC_MINUS), RSFT(KC_LBRACKET), /* */ LSFT(KC_RBRACKET), KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT,
-  LCTL_T(KC_SLASH), KC_MINUS, KC_MS_BTN1, KC_MS_BTN2, KC_LBRACKET, /* */ KC_RBRACKET, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,
-  LALT_T(KC_TILDE), RSFT(KC_BSLASH), KC_BSLASH, RSFT(KC_SLASH), KC_NO, /* */ KC_DELETE, KC_HOME, KC_PGDOWN, KC_PGUP, KC_END,
+  LCTL_T(KC_SLASH), KC_MINUS, KC_MS_BTN1, KC_MS_BTN2, KC_APPLICATION, /* */ KC_DELETE, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,
+  LALT_T(KC_TILDE), RSFT(KC_BSLASH), KC_BSLASH, RSFT(KC_SLASH), KC_LBRACKET, /* */ KC_RBRACKET, KC_HOME, KC_PGDOWN, KC_PGUP, RSFT_T(KC_END),
   RGUI_T(KC_ESCAPE), LT(CURS, KC_SPC), RSFT_T(KC_TAB), // Left
   RALT_T(KC_BSPACE), LT(FNUM, KC_ENT), LCTL(KC_7) // Right
 ),
