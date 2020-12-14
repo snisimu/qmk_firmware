@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_A, KC_O, KC_E, KC_U, KC_I, /* */ KC_D, KC_H, KC_T, KC_N, KC_S,
   KC_SCLN, KC_Q, KC_J, KC_K, KC_X, /* */ KC_B, KC_M, KC_W, KC_V, KC_Z,
   LALT_T(RCTL(KC_7)), LT(CURSOR, KC_SPACE), KC_LCTRL, // Left
-  KC_RSHIFT, NUMSYM, RGUI_T(KC_ENTER) // Right
+  KC_RSHIFT, MO(NUMSYM), RGUI_T(KC_ENTER) // Right
 ),
 
 [NUMSYM] = LAYOUT_gergoplex(
