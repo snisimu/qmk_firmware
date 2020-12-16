@@ -1,4 +1,4 @@
-/* Good on you for modifying your layout! if you don't have
+ /* Good on you for modifying your layout! if you don't have
  * time to read the QMK docs, a list of keycodes can be found at
  *
  * https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md
@@ -14,19 +14,13 @@
 
 // Combos
 enum combos {
-  SPC, ESC, LTAB, RTAB
+  DMY
 };
 
-const uint16_t PROGMEM spc_combo[] = {KC_G, KC_C, COMBO_END};
-const uint16_t PROGMEM esc_combo[] = {KC_DOT, KC_P, COMBO_END};
-const uint16_t PROGMEM ltab_combo[] = {KC_E, KC_U, COMBO_END};
-const uint16_t PROGMEM rtab_combo[] = {KC_H, KC_T, COMBO_END};
+const uint16_t PROGMEM dmy_combo[] = {KC_A,  KC_B, KC_C, KC_D, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  [SPC] = COMBO(spc_combo, KC_SPACE),
-  [ESC] = COMBO(esc_combo, KC_ESCAPE),
-  [LTAB] = COMBO(ltab_combo, KC_TAB),
-  [RTAB] = COMBO(rtab_combo, KC_TAB)
+  [DMY] = COMBO(dmy_combo, KC_NO)
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -40,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [NUMSYM] = LAYOUT_gergoplex(
-  KC_BSLASH, KC_SLASH, KC_EQUAL, KC_MINUS, KC_NO, /* */ KC_NO, KC_GRAVE, KC_TILDE, KC_LBRACKET, KC_RBRACKET,
+  KC_BSLASH, KC_SLASH, KC_EQUAL, KC_MINUS, KC_NO, /* */ KC_SPACE, KC_GRAVE, KC_TILDE, KC_LBRACKET, KC_RBRACKET,
   KC_1, KC_2, KC_3, KC_4, KC_5, /* */ KC_6, KC_7, KC_8, KC_9, KC_0,
   KC_F1, KC_F2,  KC_LALT,  KC_LCTRL,  KC_F5, /* */ KC_F6, KC_RCTRL, KC_RALT, KC_F9, KC_F10,
   KC_NO, KC_LGUI, KC_LSHIFT, // Left
@@ -49,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [CURSOR] = LAYOUT_gergoplex(
   KC_LGUI, KC_LALT, KC_LCTRL, KC_TAB, KC_NO, /* */ KC_BSPACE, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,
-  KC_NO, KC_NO, KC_APPLICATION, KC_MS_BTN1, KC_MS_BTN2, /* */ KC_DELETE, KC_HOME, KC_PGDOWN, KC_PGUP, KC_END,
+  KC_APPLICATION, KC_ESCAPE, KC_SPACE, KC_MS_BTN1, KC_MS_BTN2, /* */ KC_DELETE, KC_HOME, KC_PGDOWN, KC_PGUP, KC_END,
   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,  /* */ KC_P, KC_ENTER, KC_NO, KC_NO, KC_NO, 
   KC_NO, KC_TRANSPARENT, KC_NO, // Left
   KC_NO, KC_RSHIFT, KC_ENTER // Right
