@@ -21,3 +21,10 @@ BOOTMAGIC_ENABLE = lite
 DEBOUNCE_TYPE  = eager_pr
 SRC += matrix.c
 QUANTUM_LIB_SRC += i2c_master.c
+
+DEBOUNCE_DIR:= $(QUANTUM_DIR)/debounce
+DEBOUNCE_TYPE?= sym_defer_g
+ifneq ($(strip $(DEBOUNCE_TYPE)), custom)
+    QUANTUM_SRC += $(DEBOUNCE_DIR)/$(strip $(DEBOUNCE_TYPE)).c
+endif
+
