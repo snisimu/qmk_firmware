@@ -11,6 +11,7 @@
 #define BASE 0 // default layer
 #define NUMSYM 1 // number/symbol layer
 #define CURSOR 2 // cursor layer
+#define FUNC   3 // function layer
 
 // Combos
 enum combos {
@@ -37,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_BSLASH, KC_SLASH, KC_EQUAL, KC_MINUS, KC_NO, /* */ KC_NO, KC_GRAVE, KC_TILDE, KC_LBRACKET, KC_RBRACKET,
   KC_1, KC_2, KC_3, KC_4, KC_5, /* */ KC_6, KC_7, KC_8, KC_9, KC_0,
   KC_F1, KC_F2,  KC_LALT,  KC_LCTRL,  KC_F5, /* */ KC_F6, KC_RCTRL, KC_RALT, KC_F9, KC_F10,
-  KC_NO, KC_LGUI, KC_LSHIFT, // Left
+  MO(FUNC), KC_LGUI, KC_LSHIFT, // Left
   KC_NO, KC_TRANSPARENT, KC_NO // Right
 ),
 
@@ -47,6 +48,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_AUDIO_MUTE, LCTL(LALT(KC_P)), KC_NO, KC_NO, KC_X,  /* */ KC_B, KC_SPACE, KC_ENTER, KC_RALT, KC_NO, 
   KC_NO, KC_TRANSPARENT, KC_NO, // Left
   KC_NO, KC_RSHIFT, KC_ENTER // Right
+),
+
+[FUNC] = LAYOUT_gergoplex(
+  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, /* */ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 
+  KC_F11, KC_F12, KC_NO, KC_NO, KC_NO, /* */ KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 
+  KC_F1, KC_F2,  KC_F3,  KC_F4,  KC_F5, /* */ KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,
+  KC_TRANSPARENT, KC_LGUI, KC_LSHIFT, // Left
+  KC_NO, KC_TRANSPARENT, KC_NO // Right
 ),
 
 };
