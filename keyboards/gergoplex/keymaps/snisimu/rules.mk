@@ -18,3 +18,5 @@ SRC += matrix.c i2c_master.c
 ifeq ($(strip $(DEBUG_MATRIX)), yes)
     OPT_DEFS += -DDEBUG_MATRIX
 endif
+
+DEBOUNCE_TYPE = sym_defer_g # sym_eager_pr/sym_eager_pk/sym_defer_pk
